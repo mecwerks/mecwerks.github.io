@@ -8,13 +8,13 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Mecwerks Blog
-tagline: Mecwerks Blog
+title : mecwerks_dev
+tagline: mecwerks_dev
 author :
   name : Marcus Collins
   email : mecwerks@gmail.com
   github : mecwerks
-  twitter : FezDuckJewFro
+  twitter : mecwerks_dev
   feedburner : na
 
 markdown: kramdown
