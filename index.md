@@ -3,7 +3,6 @@ layout: page
 title: Welcome
 tagline:
 ---
-// {% include JB/setup %}
 
 ## This is a work in progress site
 
