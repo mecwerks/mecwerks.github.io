@@ -3,10 +3,9 @@
 <title>mecwerks_dev</title>
 </head>
 <body>
-This is my site.
-<br>
-Blogspot: <a href="http://mecwerks.blogspot.com">Programming and Philosophy</a>
-<br>
-Backup OpenGL <a href="gltut">Book</a>
+<?php
+	$file file_get_contents("./ghwiki/New-Game.md", FILE_USE_INCLUDE_PATH);
+	echo $file;
+?>
 </body>
 </html>
