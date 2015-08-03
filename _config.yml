@@ -3,9 +3,6 @@ markdown:	kramdown
 # Permalinks
 permalink:	/blog/:title
 
-kramdown:
-  input: GFM
-
 # Setup
 title:            Mecwerks
 tagline:          'blog'
