@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script src="js/jquery.min.js"></script>
+  <script src="http://requirejs.org/docs/release/2.2.0/minified/require.js"/>
+
+  <script>
+        $(window).ready(function(){
+          var fs = require('fs');
+          var files = fs.readdirSync('Case Hardened/AK47');
+          console.log(files);
+          });</script>
+</head>
+<body>
+  <div id="fileNames"></div>
+</body>
+</html>
