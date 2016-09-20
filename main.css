@@ -1,0 +1,23 @@
+@media screen {
+
+  /* Leading rule */
+  html {
+    -webkit-filter: brightness(80%) !important;
+  }
+
+  /* Text contrast */
+  html {
+    text-shadow: 0 0 0 !important;
+  }
+
+  /* Full screen */
+  *:-webkit-full-screen, *:-webkit-full-screen * {
+    -webkit-filter: none !important;
+  }
+
+  /* Page background */
+  html {
+    background: rgb(204,204,204) !important;
+  }
+
+}
