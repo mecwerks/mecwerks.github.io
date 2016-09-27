@@ -1,12 +1,18 @@
 <HTML>
 <head>
   <title>Marxy's Stuff</title>
-  <script type="text/javascript">
-  function resizeIframe(obj){
-     obj.style.height = 0;
-     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-  </script>
+  <style>
+    body {
+    margin: 0;            /* Reset default margin */
+}
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+  </style>
 </head>
 <body>
   <div align=center>
