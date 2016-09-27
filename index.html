@@ -1,9 +1,15 @@
 <HTML>
 <head>
   <title>Marxy's Stuff</title>
+  <script type="text/javascript">
+  function resizeIframe(obj){
+     obj.style.height = 0;
+     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+  </script>
 </head>
 <body>
   <div align=center>
-    <iframe width=600 height=500 src="https://docs.google.com/spreadsheets/d/1gANGIp-b8EVcx7IsPcOR4mFBcvdaCvstymDGIVY3nv0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <iframe onload='resizeIframe(this)' src="https://docs.google.com/spreadsheets/d/1gANGIp-b8EVcx7IsPcOR4mFBcvdaCvstymDGIVY3nv0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
   </div>
 </body>
