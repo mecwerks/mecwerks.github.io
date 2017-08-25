@@ -8,7 +8,7 @@
 	"mint-game_x86_64.dll",
 	"mint-renderer-opengl1_x86_64.dll",
 	"mint-renderer-opengl2_x86_64.dll",
-	"pak9.pk3",
+	"pak9.pk3"
  ],
  "md5": {
 	"Spearmint-Q3.exe": "A84100663961434B642C9335783CA91B",
