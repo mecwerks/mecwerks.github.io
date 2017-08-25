@@ -10,7 +10,7 @@
 	"mint-renderer-opengl2_x86_64.dll",
 	"pak9.pk3",
  ],
- "md5": [
+ "md5": {
 	"Spearmint-Q3.exe": "A84100663961434B642C9335783CA91B",
 	"SDL264.dll": "1959C450F3840E98CF1EFBB87E23773E",
 	"mint-game.settings": "BA3B6B59203BE0A9D36A52B6B19777E8",
@@ -19,5 +19,5 @@
 	"mint-renderer-opengl1_x86_64.dll": "0B5C19D6A2F04FC0F5DEE2C435EEBF76",
 	"mint-renderer-opengl2_x86_64.dll": "6B902709C500F45B21D1DD8887B6BF1B",
 	"pak9.pk3": "2AD2BE0D81B9D3AE11157D24C98AC76E"
- ]
+ }
 }
