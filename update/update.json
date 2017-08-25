@@ -1,0 +1,13 @@
+{
+ "version": "17.8.25",
+ "files": [
+	"Spearmint-Q3.exe",
+	"SDL264.dll",
+	"mint-game.settings",
+	"mint-cgame_x86_64.dll",
+	"mint-game_x86_64.dll",
+	"mint-renderer-opengl1_x86_64.dll",
+	"mint-renderer-opengl2_x86_64.dll",
+	"pak9.pk3",
+ ]
+}
