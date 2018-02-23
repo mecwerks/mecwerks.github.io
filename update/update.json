@@ -4,20 +4,18 @@
 	"Spearmint-Q3.exe",
 	"SDL264.dll",
 	"mint-game.settings",
-	"mint-cgame_x86_64.dll",
-	"mint-game_x86_64.dll",
-	"mint-renderer-opengl1_x86_64.dll",
-	"mint-renderer-opengl2_x86_64.dll",
+	"spearmint-renderer-opengl1_x86_64.dll",
+	"spearmint-renderer-opengl2_x86_64.dll",
 	"pak9.pk3"
  ],
  "md5": {
-	"Spearmint-Q3.exe": "A84100663961434B642C9335783CA91B",
+	"Spearmint-Q3.exe": "29A2420FF0DE2167BF15E85F26E402B4",
 	"SDL264.dll": "1959C450F3840E98CF1EFBB87E23773E",
 	"mint-game.settings": "BA3B6B59203BE0A9D36A52B6B19777E8",
 	"mint-cgame_x86_64.dll": "E5A917C737B628383C1BBD0A36C82413",
 	"mint-game_x86_64.dll": "CD46D9ADCFF5C9312D5CE389F088C849",
-	"mint-renderer-opengl1_x86_64.dll": "0B5C19D6A2F04FC0F5DEE2C435EEBF76",
-	"mint-renderer-opengl2_x86_64.dll": "6B902709C500F45B21D1DD8887B6BF1B",
-	"pak9.pk3": "2AD2BE0D81B9D3AE11157D24C98AC76E"
+	"spearmint-renderer-opengl1_x86_64.dll": "79A3AF269ADA59565CA37B6EA3E67DCE",
+	"spearmint-renderer-opengl2_x86_64.dll": "5BA1172AD7976F666BC018FA48584209",
+	"pak9.pk3": "49BFD9150FE2DB921529F3A02D6D6C6F"
  }
 }
