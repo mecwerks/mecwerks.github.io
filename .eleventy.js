@@ -1,7 +1,5 @@
 const { readFileSync, writeFileSync } = require('fs');
 
-require('./.pnp.cjs').setup();
-
 // inputfile: outputfile
 const nodeLibs = {
     'animejs/lib/anime.min.js': `scripts/anime.min.js`
