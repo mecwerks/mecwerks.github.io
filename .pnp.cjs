@@ -28,7 +28,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@11ty/eleventy", "npm:2.0.1"]\
+            ["@11ty/eleventy", "npm:2.0.1"],\
+            ["animejs", "npm:3.2.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -347,6 +348,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["aggregate-error", "npm:3.1.0"],\
             ["clean-stack", "npm:2.2.0"],\
             ["indent-string", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["animejs", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/animejs-npm-3.2.1-030e6c4694-6939171bed.zip/node_modules/animejs/",\
+          "packageDependencies": [\
+            ["animejs", "npm:3.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1370,7 +1380,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["homepage", "workspace:."],\
-            ["@11ty/eleventy", "npm:2.0.1"]\
+            ["@11ty/eleventy", "npm:2.0.1"],\
+            ["animejs", "npm:3.2.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
