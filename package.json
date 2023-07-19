@@ -6,8 +6,7 @@
   "packageManager": "yarn@3.6.1",
   "scripts": {
     "build": "eleventy --input=./src",
-    "start": "node ./dist/index.js",
-    "dev": "ts-node ./src/index.ts"
+    "start": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
