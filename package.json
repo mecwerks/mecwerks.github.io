@@ -6,7 +6,7 @@
   "packageManager": "yarn@3.6.1",
   "scripts": {
     "build": "eleventy --input=./src",
-    "start": "eleventy --serve"
+    "serve": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
