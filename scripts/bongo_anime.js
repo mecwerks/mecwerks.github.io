@@ -1,8 +1,15 @@
+// Inspired By
+// https://codepen.io/abeatrize/pen/LJqYey
+// Bongo Cat originally created by @StrayRogue and @DitzyFlama
 $( document ).ready(function() {
-    // Inspired By
-    // https://codepen.io/abeatrize/pen/LJqYey
-
-    // Bongo Cat originally created by @StrayRogue and @DitzyFlama
+    //=========================
+    // Controlls the cat
+    //=========================
+    const pawDuration = 220;
+    const typeDuration = 150;
+    const noteDuration = 2000;
+    const noteDelay = 500;
+    //=========================
 
     const ID = "bongo-cat";
     const s = (selector) => `#${ID} ${selector}`;
@@ -38,29 +45,31 @@ $( document ).ready(function() {
         opacity: 1,
     });
 
-    const tl = anime.timeline({
-        direction: 'alternate',
-        easing: 'linear',
-        duration: 0.000001,
-        loop: true,
-    });
-
-    tl.add({
-            targets: [cat.pawLeft.down, cat.pawRight.up],
-            opacity: [0, 1],
-        })
-        .add({
-            targets: [cat.pawLeft.up, cat.pawRight.down],
-            opacity: [1, 0],
+    const pawFrames = (v1, v2, i1, i2) => {
+        anime.set([i1, i2], {
+            opacity: 0,
         })
 
+        anime.set([v1, v2], {
+            opacity: 1,
+        })
 
+        anime({
+            targets: [v1, v2, i1, i2],
+            duration: pawDuration,
+            complete: () => pawFrames(i1, i2, v1, v2),
+        })
+    }
+
+    pawFrames(cat.pawLeft.up, cat.pawRight.down, cat.pawLeft.down, cat.pawRight.up);
+   
     anime({
         targets: ".terminal-code line",
         strokeDashoffset: [anime.setDashoffset, 0],
-        duration: 200,
-        delay: function(el, i) { return i * 200 },
-        endDelay: 75,
+        opacity: [0.5, 1],
+        duration: typeDuration,
+        delay: anime.stagger(typeDuration),
+        endDelay: 100,
         easing: 'easeInOutSine',
         loop: true,
     })
@@ -101,8 +110,8 @@ $( document ).ready(function() {
         translateX: [() => anime.random(-25, 25), dir(anime.random(40, 60))],
         translateY: [0, anime.random(-200, -220)],
         rotate: [() => anime.random(-50, 50), dir(anime.random(20, 30))],
-        delay: anime.stagger(500),
-        duration: 2000,
+        delay: anime.stagger(noteDelay),
+        duration: noteDuration,
         loop: false,
         complete: () => {
             anime(animateNotes(elements))
