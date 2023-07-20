@@ -75,5 +75,10 @@ body {
     .headphone .speaker path:first-child {
         stroke: var(--cyan);
     }
+
+    .music .note {
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+    }
 }
 

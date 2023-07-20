@@ -35,7 +35,7 @@ $( document ).ready(function() {
 
     // gsap.set(music.note, { scale: 0, autoAlpha: 1 });
     anime.set(music.note, {
-        scale: 0,
+        scale: 1,
         opacity: 1,
     });
 
@@ -95,6 +95,33 @@ $( document ).ready(function() {
         loop: true,
     })
 
+    const shuffle = (array) => {
+        let currentIndex = array.length,  randomIndex;
+      
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+      }
+    const noteElements = shuffle(Array.from(document.querySelectorAll(music.note)));
+
+    const numNotes = noteElements.length / 3;
+    const notesG1 = noteElements.splice(0, numNotes);
+    const notesG2 = noteElements.splice(0, numNotes);
+    const notesG3 = noteElements;
+    
+    const noteColors = [green, pink, blue, orange, cyan, "#a3a4ec", "#67b5c0", "#fd7c6e"];
+    const dir = (amt) => Math.random() > 0.5 ? `-=${amt}` : `+=${amt}`;
+
     // typing for pipe function doesn't seem to be working for usage when partially applied?
     // const noteElFn = gsap.utils.pipe(gsap.utils.toArray, gsap.utils.shuffle);
     // const noteEls = noteElFn(music.note);
@@ -108,6 +135,33 @@ $( document ).ready(function() {
     // const rotator = gsap.utils.random(-50, 50, 1, true);
     // const dir = (amt) => `${gsap.utils.random(["-", "+"])}=${amt}`;
 
+    const animateNotes = (elements) => {
+        // anime.set({
+        //     targets: elements,
+        //     scale: 0,
+        //     stroke: colorizer(),
+        //     rotate: () => anime.random(-50, 50),
+        //     translateX: () => anime.random(-250, 250),
+        // });
+
+        return anime({
+            targets: elements,
+            opacity: [1, 0],
+            scale: [0, 1],
+            easing: 'linear',
+            stroke: () => noteColors[Math.floor(Math.random() * noteColors.length)],
+            translateX: [() => anime.random(-25, 25), dir(anime.random(40, 60))],
+            translateY: [0, anime.random(-200, -220)],
+            rotate: [() => anime.random(-50, 50), dir(anime.random(20, 30))],
+            delay: anime.stagger(500),
+            duration: 2000,
+            loop: true,
+            // complete: function(anim) {
+            //     animateNotes(elements);
+            // }
+        });
+    }
+
     // const animateNotes = (els) => {
     // els.forEach((el) => {
     //     gsap.set(el, {
@@ -120,26 +174,27 @@ $( document ).ready(function() {
     // return gsap.fromTo(
     //     els,
     //     {
-    //     autoAlpha: 1,
-    //     y: 0,
-    //     scale: 0,
+    //      autoAlpha: 1,
+    //      y: 0,
+    //      scale: 0,
     //     },
     //     {
-    //     duration: 2,
-    //     autoAlpha: 0,
-    //     scale: 1,
-    //     ease: "none",
-    //     stagger: {
+    //      duration: 2,
+    //      autoAlpha: 0,
+    //      scale: 1,
+    //      ease: "none",
+    //      stagger: {
     //         from: "random",
     //         each: 0.5,
-    //     },
-    //     rotation: dir(gsap.utils.random(20, 30, 1)),
-    //     x: dir(gsap.utils.random(40, 60, 1)),
-    //     y: gsap.utils.random(-200, -220, 1),
-    //     onComplete: () => animateNotes(els),
+    //      },
+    //      rotation: dir(gsap.utils.random(20, 30, 1)),
+    //      x: dir(gsap.utils.random(40, 60, 1)),
+    //      y: gsap.utils.random(-200, -220, 1),
+    //      onComplete: () => animateNotes(els),
     //     }
-    // );
+    //  );
     // };
 
     // tl.add(animateNotes(notesG1)).add(animateNotes(notesG2), ">0.05").add(animateNotes(notesG3), ">0.25");
+    anime.timeline().add(animateNotes(notesG1)).add(animateNotes(notesG2), "+=50").add(animateNotes(notesG3), "+=250")
 });
