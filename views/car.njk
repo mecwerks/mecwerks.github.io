@@ -1,0 +1,8 @@
+---
+pagination:
+  data: cars
+  size: 1
+permalink: 'cars/{{ pagination.pageNumber }}/index.html'
+---
+
+<h1>{{ pagination.items[0].make }} {{ pagination.items[0].model }} {{ pagination.items[0].spec }}</h1>

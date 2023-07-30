@@ -5,7 +5,7 @@
   "license": "MIT",
   "packageManager": "yarn@3.6.1",
   "scripts": {
-    "build": "eleventy --input=./src",
+    "build": "eleventy",
     "serve": "eleventy --serve"
   },
   "devDependencies": {

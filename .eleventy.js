@@ -16,4 +16,12 @@ module.exports = function(eleventyConfig) {
             writeFileSync(dir.output + `/` + nodeLibs[key], buffer);
         }
     });
+
+    return {
+        dir: {
+            input: 'views',
+            output: '_site',
+            data: '_data',
+        }
+    }
 };
