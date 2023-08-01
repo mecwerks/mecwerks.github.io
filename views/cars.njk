@@ -308,8 +308,12 @@ footer a {
   $(document).ready( function () {
     $('#myTable').toggle();
     $('#myTable').DataTable({
+      fixedHeader: true,
       paging: true,
-      lengthMenu: [ [50, 250, 1000, -1], [50, 250, 1000, "All"] ]
+      lengthMenu: [ [50, 250, 1000, -1], [50, 250, 1000, "All"] ],
+      columnDefs: [
+        { type: "num", targets: 10  },
+      ]
     });
 } );
 </script>
@@ -324,10 +328,17 @@ footer a {
       <th>Model</th>
       <th>Spec</th>
       <th>Transmission</th>
+      <th>Frame</th>
       <th>Seats</th>
       <th>Doors</th>
-      <th>Fuel Cap.</th>
+      <th>Fuel Cap. (Gal)</th>
       <th>MPG</th>
+      <th>Displacement (cm3)</th>
+      <th>Length (in)</th>
+      <th>Width (in)</th>
+      <th>Height (in)</th>
+      <th>Weight (lbs)</th>
+      <th>Ground Clearance (in)</th>
       <th>Power Steering</th>
       <th>A/C</th>
       <th>Passenger Airbags</th>
@@ -345,10 +356,17 @@ footer a {
     <td>{{ car.model }}</td>
     <td>{{ car.spec }}</td>
     <td>{{ car.transmission }}</td>
+    <td>{{ car.frame }}</td>
     <td>{{ car.seats }}</td>
     <td>{{ car.doors }}</td>
     <td>{{ car.fuel }}</td>
     <td>{{ car.mpg }}</td>
+    <td>{{ car.displacement }}</td>
+    <td>{{ car.length }}</td>
+    <td>{{ car.width }}</td>
+    <td>{{ car.height }}</td>
+    <td>{{ car.weight }}</td>
+    <td>{{ car.groundClearance }}</td>
     <td>{{ car.powerSteering }}</td>
     <td>{{ car.airConditioner }}</td>
     <td>{{ car.passengerAirbags }}</td>
