@@ -318,7 +318,7 @@ footer a {
 } );
 </script>
 
-<h1>Right Hand Drive Cars with Driver Airbags</h1>
+<h1>Car List (RHD, Airbags, Non-duplicate year-make-model-transmission)</h1>
 
 <table id="myTable" style="display:none;">
   <thead>
@@ -327,22 +327,23 @@ footer a {
       <th>Make</th>
       <th>Model</th>
       <th>Spec</th>
-      <th>Transmission</th>
+      <th>Trans.</th>
       <th>Frame</th>
       <th>Seats</th>
       <th>Doors</th>
-      <th>Fuel Cap. (Gal)</th>
+      <th>Fuel Cap</th>
       <th>MPG</th>
-      <th>Displacement (cm3)</th>
+      <th>CCs</th>
+      <th>Vol ft³</th>
       <th>Length (in)</th>
       <th>Width (in)</th>
       <th>Height (in)</th>
       <th>Weight (lbs)</th>
-      <th>Ground Clearance (in)</th>
-      <th>Power Steering</th>
+      <th>Clearance (in)</th>
+      <th>Power Steer</th>
       <th>A/C</th>
-      <th>Passenger Airbags</th>
-      <th>Side Airbags</th>
+      <th>Pass. Airbag</th>
+      <th>Side Airbag</th>
       <th>ABS</th>
       <th>TCS</th>
       <th>Link</th>
@@ -362,6 +363,7 @@ footer a {
     <td>{{ car.fuel }}</td>
     <td>{{ car.mpg }}</td>
     <td>{{ car.displacement }}</td>
+    <td>{{ ((car.width * car.height * car.length) / 1728) | round(2) }}</td>
     <td>{{ car.length }}</td>
     <td>{{ car.width }}</td>
     <td>{{ car.height }}</td>
